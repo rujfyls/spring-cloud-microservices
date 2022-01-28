@@ -1,0 +1,25 @@
+logging:
+  level:
+    org.springframework.security: INFO
+
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 20000
+
+#            предохранитель вызова между сервисами
+
+eureka:
+  instance:
+    preferIpAddress: true
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+
+#   это и есть ссылка на дискавери сервис, через который должны пройти все сервисы и зарегестрироваться
+#   в нем, чтобы в нем хранились все ip adress and port каждого сервиса
+
+#     это общий файл конфигурации для всех сервисов
