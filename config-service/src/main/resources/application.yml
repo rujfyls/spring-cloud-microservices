@@ -1,11 +1,10 @@
-config-service
 spring:
   cloud:
     config:
       server:
         native:
           search-locations: classpath:/services
-#              другие конфиги будет лежать в папке "/services"
+  #              другие конфиги будет лежать в папке "/services"
   profiles:
     active: native
   security:

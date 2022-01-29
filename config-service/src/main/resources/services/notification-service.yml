@@ -1,4 +1,3 @@
-notification-service
 server:
   port: 9999
 

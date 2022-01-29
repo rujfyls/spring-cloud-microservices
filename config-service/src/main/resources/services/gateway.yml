@@ -1,4 +1,3 @@
-gateway-service
 hystrix:
   command:
     default:
@@ -16,7 +15,7 @@ zuul: #это сам gateway service
   host:
     connect-timeout-millis: 20000
     socket-timeout-millis: 20000
-# перечисляем сервисы и пути
+  # перечисляем сервисы и пути
   routes:
     account-service:
       path: /accounts/**

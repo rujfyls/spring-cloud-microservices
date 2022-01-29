@@ -1,4 +1,3 @@
-bootstrap
 spring:
   application:
     name: account-service
