@@ -7,6 +7,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+import java.util.stream.Collectors;
+
 @RestController
 //@RequestMapping("/bill") //это прописывать не надо так как в конфиг сервисе уже все прописал
 public class BillController {
@@ -46,5 +49,11 @@ public class BillController {
     @DeleteMapping("/billId")
     public ResponseEntity<BillResponseDTO> deleteBill(@PathVariable Long billId) {
         return ResponseEntity.ok(new BillResponseDTO(billService.deleteBillById(billId)));
+    }
+
+    @GetMapping("/account/{accountId}")
+    public ResponseEntity<List<BillResponseDTO>> getBillsByAccountId(@PathVariable Long accountId) {
+        return ResponseEntity.ok(billService.getBillsByAccountId(accountId).stream().map(BillResponseDTO::new)
+                .collect(Collectors.toList()));
     }
 }

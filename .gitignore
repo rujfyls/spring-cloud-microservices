@@ -17,3 +17,5 @@ notification-service/.gradle
 registry/.gradle
 
 .idea
+
+notification-service/src/main/resources/mail-prop.properties

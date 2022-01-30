@@ -1,4 +1,4 @@
-package com.javastart.bill.controller.dto;
+package com.javastart.deposit.rest;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -8,13 +8,17 @@ import java.time.OffsetDateTime;
 
 @Data
 @NoArgsConstructor
-public class BillRequestDTO {
+public class BillResponseDTO {
+
+    private Long billId;
 
     private Long accountId;
 
     private BigDecimal amount;
 
     private Boolean isDefault;
+
+    private OffsetDateTime creationDate;
 
     private Boolean overdraftEnabled;
 }
