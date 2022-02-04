@@ -3,12 +3,14 @@ package com.javastart.account.controller.dto;
 import com.javastart.account.entity.Account;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.time.OffsetDateTime;
 import java.util.List;
 
 @Data
 @AllArgsConstructor
+@NoArgsConstructor
 public class AccountResponseDTO {
 
     private Long accountId;
@@ -30,5 +32,13 @@ public class AccountResponseDTO {
         this.phone = account.getPhone();
         this.bills = account.getBills();
         this.creationDate = account.getCreationDate();
+    }
+
+    public void setCreationDate(String creationDate) {
+        this.creationDate = OffsetDateTime.parse(creationDate);
+    }
+
+    public void setCreationDate(OffsetDateTime creationDate) {
+        this.creationDate = creationDate;
     }
 }
