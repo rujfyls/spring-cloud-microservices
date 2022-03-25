@@ -25,11 +25,17 @@ _______________________________________________________
 
 **Архитектура**
 
+![architecture](https://user-images.githubusercontent.com/86868993/160143037-82463054-aad2-4018-af18-7bf8da46988a.png)
+
 
 **Бизнес логика**
 
+![bisnes-logic](https://user-images.githubusercontent.com/86868993/160143078-003033c8-b0d9-48d9-b29c-95bfc8876d45.png)
+
 
 **Диаграмма базы данных**
+
+![db](https://user-images.githubusercontent.com/86868993/160143134-e7d8d8f7-c061-443c-b8ba-64536e1afbf8.png)
 
 
 ______________________________________________________
